@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Shop - Livestock & Products</title>
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img\farmer.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+        <meta name="description" content="Greenfield Farm shop — ethically raised livestock, dairy, and organic produce. Buy pasture-raised meats, fresh milk, and seasonal vegetables from our farm." />
+        <!-- Open Graph / Social -->
+        <meta property="og:title" content="Greenfield Farm Shop" />
+        <meta property="og:description" content="Ethically raised livestock & organic produce — buy pasture-raised meats, dairy, and seasonal vegetables from Greenfield Farm." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1200&h=630&crop=faces" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Greenfield Farm Shop" />
+        <meta name="twitter:description" content="Ethically raised livestock & organic produce — buy pasture-raised meats, dairy, and seasonal vegetables from Greenfield Farm." />
+
+        <!-- JSON-LD structured data (Organization + Store) -->
+       <link rel="stylesheet" href="shop.css">
+       </head>
+
+<body>
+     <!-- this is the header section -->
+    <header class="head">
+        <div class="logo-container">
+            <div class="f">FM</div>
+            <div class="farm-info">
+                <h3 class="class farm-title" >Greenfield Farm</h3>
+                <p class="farm-description">Ethical livestock & regenerative plant farming</p>
+            </div>
+        </div>
+        <ul class="heading">
+            <li><a href="">About</a></li>
+            <li><a href="">livestock</a></li>
+            <li><a href="">Plants</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">Contact</a></li>
+           <div class="shop-container">
+            <li><button id="cartBtn" class="shop" style="margin-right: 150px; position: relative;" aria-haspopup="true" aria-expanded="false" aria-controls="cartItems" aria-label="Open cart">Cart
+                <span id="cartBadge" class="cart-badge" aria-hidden="true" style="display:none;">0</span>
+            </button></li>
+            <div class="dropdown-content" role="region" aria-label="Shopping cart">
+                <div id="cartEmpty" class="cart-empty">Your cart is empty</div>
+                <div id="cartItems" class="cart-items"></div>
+                <div id="cartTotal" class="cart-total"></div>
+                <a href="#checkout" id="checkoutBtn" class="checkout-btn" aria-label="Checkout">Checkout</a>
+            </div>
+           </div>
+            
+        </ul>
+    </header>
+    <!-- end of the header -->
+    <main>
+        <!-- begining of the pasture div -->
+        <div class="all">
+           
+<div class="d1">
+    <div>
+        <h2 class="gradient-text"><b>From pasture to plate — sustainable livestock & thriving crops</b></h2>
+        <p class="main-description">Family-run regenerative farm specializing in ethically raised animals and organic produce. Join our CSA or visit our farm store.</p>
+    </div>
+<!-- the buttons -->
+    <div class="button-group">
+        <a href=""><button class="btn">Contact Us</button></a>
+        <a href=""><button class="btn2">Explore Livestock</button></a>
+    </div>
+<!-- the boxes -->
+    <div class="info-boxes">
+        <div class="same">
+            <h5>On-Farm Pickup</h5>
+            <p>Weekly pickup and flexible slots.</p>
+        </div>
+        <div class="same">
+            <h5>Regenerative Practices</h5>
+            <p>Soil-first, biodiversity-focused.</p>
+        </div>
+    </div>
+</div>
+<!-- the image div -->
+<div class="img">
+
+</div>
+        </div>
+
+        <!-- the end of the pasture div -->
+
+        <!-- Farm Products Section -->
+    <div class="farm-products">
+        <!-- Livestock section -->
+        <div class="livestock">
+            <div class="live">
+                <h2 class="gradient-text" id="shift">Our Livestock</h2>
+                <p style="text-align: center; margin-bottom: 30px; ">Humanely raised, pasture-fed animals available for direct purchase or via CSA shares.</p>
+                <!-- Product filters: search, category, price -->
+                <div class="product-filters" aria-hidden="false">
+                    <input type="search" id="productSearch" placeholder="Search products..." aria-label="Search products" />
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="">All categories</option>
+                        <option value="cattle">Cattle</option>
+                        <option value="hogs">Hogs</option>
+                        <option value="sheep">Sheep</option>
+                        <option value="poultry">Poultry</option>
+                        <option value="goats">Goats</option>
+                        <option value="turkeys">Turkeys</option>
+                    </select>
+                    <label style="font-size:13px;">Price</label>
+                    <input type="number" id="minPrice" placeholder="Min" min="0" aria-label="Minimum price" style="width:80px" />
+                    <input type="number" id="maxPrice" placeholder="Max" min="0" aria-label="Maximum price" style="width:80px" />
+                    <button id="clearFilters" style="padding:6px 10px;">Clear</button>
+                </div>
+
+                <div class="stocks">
+                    <!-- Angus Cattle -->
+                    <div class="stock" data-price="100" data-category="cattle" role="article" aria-labelledby="prod-angus" data-img="https://images.unsplash.com/photo-1526141770574-c59559de4017?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1517423568366-8b83523034fd?auto=format&fit=crop&w=800&q=60">
+                       
+                        <div class="in">
+                            
+                            <h4 id="prod-angus" style="font-size: 15px; margin: 0;">Angus Cattle</h4>
+                            <p style="font-size: 10px; margin: 0 0 2px 0;">Grass-fed beef, ethically raised.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                                <p style="font-size: 12px; margin: 0;">$100</p>
+                                <div class="product-actions">
+                                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                                    <span class="prod-qty">1</span>
+                                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                                    <button class="cart" onclick="addToCart('Angus Cattle', 100, this)" aria-label="Add Angus Cattle to cart">Add to cart</button>
+                                    <button class="details" data-name="Angus Cattle" data-price="100" data-desc="Grass-fed beef, ethically raised." data-img="https://images.unsplash.com/photo-1526141770574-c59559de4017?auto=format&fit=crop&w=800&q=60" aria-label="View details for Angus Cattle">Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <!-- Heritage Hogs -->
+    <div class="stock" data-price="100" data-category="hogs" role="article" aria-labelledby="prod-hogs" data-img="https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1543353071-087092ec3933?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1595433562696-4b4b2b4dc7c3?auto=format&fit=crop&w=800&q=60">
+                        
+                        <div class="in">            <h4 id="prod-hogs" style="font-size: 15px; margin: 0;">Heritage Hogs</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Rich-flavored pork from small-batch herds.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$100</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart" onclick="addToCart('Heritage Hogs', 100, this)" aria-label="Add Heritage Hogs to cart">Add to cart</button>
+                    <button class="details" data-name="Heritage Hogs" data-price="100" data-desc="Rich-flavored pork from small-batch herds." data-img="https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&fit=crop&w=800&q=60" aria-label="View details for Heritage Hogs">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stock" data-price="100" data-category="sheep" role="article" aria-labelledby="prod-sheep" data-img="https://images.unsplash.com/photo-1570015329194-675ae0cf2516?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=60">
+                     <div class="in">         
+                               <h4 id="prod-sheep" style="font-size: 15px; margin: 0;">Pasture Sheep</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Wool and lamb raised on open pastures.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$100</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart" onclick="addToCart('Pasture Sheep', 100, this)" aria-label="Add Pasture Sheep to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Pasture Sheep" data-price="100" data-desc="Wool and lamb raised on open pastures." data-img="https://images.unsplash.com/photo-1570015329194-675ae0cf2516?auto=format&fit=crop&w=800&q=60" aria-label="View details for Pasture Sheep">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stock" data-price="100" data-category="poultry" role="article" aria-labelledby="prod-poultry" data-img="https://images.unsplash.com/photo-1502700807168-484a3e7889d0?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1516208981282-7f3b6b2d8a1b?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=800&q=60">
+       
+        <div class="in">
+            <h4 id="prod-poultry" style="font-size: 15px; margin: 0;">Free-Range Poultry</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Fresh eggs and pasture-raised chickens.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$100</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart" onclick="addToCart('Free-Range Poultry', 100, this)" aria-label="Add Free-Range Poultry to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Free-Range Poultry" data-price="100" data-desc="Fresh eggs and pasture-raised chickens." data-img="https://images.unsplash.com/photo-1502700807168-484a3e7889d0?auto=format&fit=crop&w=800&q=60" aria-label="View details for Free-Range Poultry">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stock" data-price="8" data-category="goats" role="article" aria-labelledby="prod-goats" data-img="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1558980664-10e7174d24a2?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=60">
+       
+        <div class="in">
+            <h4 id="prod-goats" style="font-size: 15px; margin: 0;">Alpine Dairy Goats</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Fresh milk and artisanal cheeses. Made to order.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">Milk: $8/qt<br>Cheese: $12/8oz</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart" onclick="addToCart('Alpine Dairy Goats', 8, this)" aria-label="Add Alpine Dairy Goats to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Alpine Dairy Goats" data-price="8" data-desc="Fresh milk and artisanal cheeses. Made to order." data-img="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=60" aria-label="View details for Alpine Dairy Goats">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stock" data-price="6.99" data-category="turkeys" role="article" aria-labelledby="prod-turkeys" data-img="https://images.unsplash.com/photo-1559056199-6410b3a8bc30?auto=format&fit=crop&w=800&q=60" data-img2="https://images.unsplash.com/photo-1529270290-6b1b18b0a9d1?auto=format&fit=crop&w=800&q=60" data-img3="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60">
+                        
+                        <div class="in">            <h4 id="prod-turkeys" style="font-size: 15px; margin: 0;">Heritage Turkeys</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Bourbon Red variety. Perfect for special occasions.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">From $6.99/lb</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart" onclick="addToCart('Heritage Turkeys', 6.99, this)" aria-label="Pre-order Heritage Turkeys">Pre-order</button>
+                    <button class="details" data-name="Heritage Turkeys" data-price="6.99" data-desc="Bourbon Red variety. Perfect for special occasions." data-img="https://images.unsplash.com/photo-1559056199-6410b3a8bc30?auto=format&fit=crop&w=800&q=60" aria-label="View details for Heritage Turkeys">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div> <!-- end of live -->
+        </div> <!-- end of livestock -->
+    </div> <!-- end of farm-products -->
+
+
+<!-- Product details modal -->
+<div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+        <div class="modal-image-section">
+            <img id="modalImg" src="" alt="" />
+                <div class="image-gallery">
+                <img class="thumbnail active" src="" alt="Main view" />
+                <img class="thumbnail" src="" alt="View 2" />
+                <img class="thumbnail" src="" alt="View 3" />
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="livestock-title">Product</h3>
+                <button class="close-btn" id="modalClose" aria-label="Close">×</button>
+            </div>
+            
+            <div class="price-availability">
+                <p id="modalPrice" class="price-tag"></p>
+                <span id="modalAvailability" class="availability-tag available">In Stock</span>
+            </div>
+
+            <div class="product-details">
+                <p id="modalDesc" class="livestock-description"></p>
+                
+                <div class="details-section">
+                    <h4>Key Features</h4>
+                    <ul id="modalFeatures" class="features-list">
+                        <li>Ethically raised with sustainable practices</li>
+                        <li>100% grass-fed and free-range</li>
+                        <li>No hormones or antibiotics used</li>
+                        <li>Regular veterinary care and monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h4>Care Requirements</h4>
+                    <ul id="modalCare" class="care-list">
+                        <li>Spacious pasture environment needed</li>
+                        <li>Regular feeding and fresh water access</li>
+                        <li>Shelter from extreme weather</li>
+                        <li>Regular health check-ups recommended</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h4>Farm Standards</h4>
+                    <div class="standards-icons">
+                        <span class="standard-icon">🌱 Organic</span>
+                        <span class="standard-icon">🌿 Sustainable</span>
+                        <span class="standard-icon">💚 Ethical</span>
+                        <span class="standard-icon">🏆 Award-winning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button id="modalAdd" class="cart" onclick="addToCart(document.getElementById('modalTitle').textContent, parseFloat(document.getElementById('modalPrice').textContent.replace('$', '')))">
+                    Add to cart
+                </button>
+                <button class="inquiry-btn">Request More Information</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- the crops and plants -->
+<div class="crops">
+    <h2 class="gradient-text" style="text-align: center; margin-bottom: 10px;">Crops & Plants</h2>
+    <p style="text-align: center; margin-bottom: 30px;">Seasonal vegetables, herbs, and orchard fruit grown using organic methods.</p>
+<div class="plants">
+    <div class="plant" data-price="10" data-category="vegetables" role="article" aria-labelledby="prod-tomato">
+        <div class="ins">
+            
+            <h4 id="prod-tomato" style="font-size: 15px; margin: 0;">Heirloom Tomatoes</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Vibrant tomatoes for market and CSA.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$10</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Heirloom Tomatoes', 10, this)" aria-label="Add Heirloom Tomatoes to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Heirloom Tomatoes" data-price="10" data-desc="Vibrant tomatoes for market and CSA." data-img="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=60" aria-label="View details for Heirloom Tomatoes">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plant" data-price="23" data-category="fruit" role="article" aria-labelledby="prod-apples">
+        <div class="ins">
+           
+            <h4 id="prod-apples" style="font-size: 15px; margin: 0;">Apple Orchard</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Organic orchards producing sweet apples.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$23</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Apple Orchards', 23, this)" aria-label="Add Apple Orchard product to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Apple Orchard" data-price="23" data-desc="Organic orchards producing sweet apples." data-img="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=800&q=60" aria-label="View details for Apple Orchard">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plant" data-price="15" data-category="herbs" role="article" aria-labelledby="prod-herbs">
+        <div class="ins">
+            
+            <h4 id="prod-herbs" style="font-size: 15px; margin: 0;">Herb Beds</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Basil, rosemary, thyme and more.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$15</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Herb Beds', 15, this)" aria-label="Add Herb Beds to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Herb Beds" data-price="15" data-desc="Basil, rosemary, thyme and more." data-img="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60" aria-label="View details for Herb Beds">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div class="plant" data-price="9" data-category="goats" role="article" aria-labelledby="prod-dairygoats">
+        <div class="ins">
+            
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Milk and cheese from happy goats.</p>
+                <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$9</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Dairy Goats', 9, this)" aria-label="Add Dairy Goats to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Dairy Goats" data-price="9" data-desc="Milk and cheese from happy goats." data-img="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=800&q=60" aria-label="View details for Dairy Goats">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plant">
+        <div class="ins">
+            <h4 style="font-size: 15px; margin: 0;">Fresh Berries</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Seasonal strawberries & blueberries.</p>
+               <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$10</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Fresh Berries', 10, this)" aria-label="Add Fresh Berries to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Fresh Berries" data-price="10" data-desc="Seasonal strawberries & blueberries." data-img="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=800&q=60" aria-label="View details for Fresh Berries">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="plant">
+        <div class="ins">
+            <h4 style="font-size: 15px; margin: 0;">Garden Greens</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Fresh lettuce, kale, and spinach.</p>
+               <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 12px; margin: 0;">$32</p>
+                <div class="product-actions">
+                    <button class="prod-qty-decrease" aria-label="Decrease quantity">−</button>
+                    <span class="prod-qty">1</span>
+                    <button class="prod-qty-increase" aria-label="Increase quantity">+</button>
+                    <button class="cart"  onclick="addToCart('Garden Greens', 32, this)" aria-label="Add Garden Greens to cart">Add to cart</button>
+                    <button class="details" onclick="openModal(event)" data-name="Garden Greens" data-price="32" data-desc="Fresh lettuce, kale, and spinach." data-img="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=60" aria-label="View details for Garden Greens">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+    <!-- Checkout Modal -->
+    <div class="product-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-hidden="true" style="display:none;">
+        <div class="modal-content" style="max-width:600px;">
+            <div style="width:100%;">
+                <div class="modal-header">
+                    <h3 class="livestock-title">Checkout</h3>
+                    <button class="close-btn" id="checkoutClose">×</button>
+                </div>
+                <div style="padding: 10px 0;">
+                    <div id="checkoutSummary" style="max-height:220px; overflow:auto; margin-bottom:10px;"></div>
+                    <form id="checkoutForm">
+                        <input type="text" id="custName" placeholder="Full name" required style="width:100%; padding:8px; margin-bottom:8px;" />
+                        <input type="email" id="custEmail" placeholder="Email" required style="width:100%; padding:8px; margin-bottom:8px;" />
+                        <input type="text" id="custAddress" placeholder="Delivery address" required style="width:100%; padding:8px; margin-bottom:8px;" />
+                        <input type="text" id="custCard" placeholder="Card number (test)" required style="width:100%; padding:8px; margin-bottom:8px;" />
+                        <button type="button" id="placeOrder" class="checkout-btn" style="width:100%;">Place Order</button>
+                    </form>
+                    <div id="orderMessage" style="display:none; margin-top:10px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    the help area -->
+<div class="touch">
+    <h2 class="gradient-text-alt">Get in Touch</h2>
+    <p>Questions about availability, orders, or tours? Send us a message.</p>
+    <div class="form-group">
+        <input type="text" placeholder="Your Name" style="width: calc(50% - 30px);">
+        <input type="email" placeholder="Email" style="width: calc(50% - 30px);">
+        <input type="tel" placeholder="Phone Number (Optional)" style="width: calc(50% - 30px);">
+        <input type="text" placeholder="Subject" style="width: calc(50% - 30px);">
+        <select style="width: calc(50% - 30px); min-width: 280px; height: 40px; border-radius: 5px; border: 1px solid #ddd; padding: 0 15px;">
+            <option value="">Select Inquiry Type</option>
+            <option value="livestock">Livestock Purchase</option>
+            <option value="produce">Plant Produce Order</option>
+            <option value="csa">CSA Subscription</option>
+            <option value="tour">Tour Booking</option>
+        </select>
+        <textarea style="width: 100%; min-height: 120px; border-radius: 5px; border: 1px solid #ddd; padding: 15px; resize: vertical;" placeholder="Your Message"></textarea>
+    </div>
+    <div class="side">
+        <p style="margin-top: 20px;">Or reach us at (555) 123-4567 or visit our farm store.</p>
+    <button type="submit" style="background-color: green; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; margin-top: 20px; margin-bottom: 40px;">Send Message</button>
+    </div>
+    
+    <marquee behavior="" direction="left">We'd love to hear from you! Whether you have questions about our farm, want to learn more about our practices, or are interested in placing an order, feel free to reach out.</marquee>
+
+ </div>
+ <!-- Footer Section -->
+<footer>
+    <div class="footer-left">
+        <h3>Greenfield Farm</h3>
+        <p>123 Farm Road, Countryside — Open Mon–Sat</p>
+    </div>
+    <div class="footer-right">
+        <p>© 2025 Greenfield Farm — All rights reserved</p>
+    </div>
+</footer>
+
+
+       <script>
+// Inlined cleaned script (merged per Option B) — cart, modal, checkout, and helpers
+// -- begin cleaned JS
+
+// Cleaned script.js — JavaScript only (HTML/script/style tags removed)
+// Global wrapper so inline onclick="openModal(event)" works (delegates to modal already initialized)
+window.openModal = function(ev) {
+    try {
+        const e = ev || window.event;
+        let btn = e.currentTarget || e.target || null;
+        if (btn && btn.nodeType === 3) btn = btn.parentElement;
+        if (btn && btn.closest) btn = btn.closest('button') || btn;
+        if (!btn) return;
+        // read data attributes
+        const name = btn.dataset.name || '';
+        const price = btn.dataset.price || '';
+        const desc = btn.dataset.desc || '';
+        const img = btn.dataset.img || '';
+        const img2 = btn.dataset.img2 || '';
+        const img3 = btn.dataset.img3 || '';
+
+        if (!modal) modal = document.querySelector('.product-modal');
+        if (!modal) return;
+        const modalImg = modal.querySelector('#modalImg');
+        const modalTitle = modal.querySelector('#modalTitle');
+        const modalDesc = modal.querySelector('#modalDesc');
+        const modalPrice = modal.querySelector('#modalPrice');
+        if (modalImg) modalImg.src = img || '';
+        if (modalTitle) modalTitle.textContent = name;
+        if (modalDesc) modalDesc.textContent = desc;
+        if (modalPrice) modalPrice.textContent = price ? ('$' + parseFloat(price).toFixed(2)) : '';
+        const thumbs = modal.querySelectorAll('.thumbnail');
+        if (thumbs && thumbs.length) {
+            thumbs[0].src = img || '';
+            if (thumbs[1]) thumbs[1].src = img2 || img || '';
+            if (thumbs[2]) thumbs[2].src = img3 || img2 || img || '';
+            thumbs.forEach(t => t.classList.remove('active'));
+            if (thumbs[0]) thumbs[0].classList.add('active');
+        }
+        modal.style.display = 'flex';
+    } catch (err) {
+        console.error('openModal error', err);
+    }
+};
+
+// Initialize cart system
+const cart = {
+    items: [],
+
+    // addItem now accepts optional quantity (qty)
+    addItem(name, price, qty = 1) {
+        price = parseFloat(price) || 0;
+        qty = parseInt(qty) || 1;
+        const existingItem = this.items.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity = (existingItem.quantity || 0) + qty;
+        } else {
+            this.items.push({
+                name,
+                price,
+                quantity: qty
+            });
+        }
+        this.saveCart();
+        this.updateDisplay();
+        this.showNotification(`Added ${name} ×${qty} to cart`);
+    },
+
+    // change quantity of an existing item by delta (±)
+    changeQuantity(name, delta) {
+        const it = this.items.find(i => i.name === name);
+        if (!it) return;
+        it.quantity = (it.quantity || 0) + parseInt(delta);
+        if (it.quantity <= 0) {
+            this.removeItem(name);
+            return;
+        }
+        this.saveCart();
+        this.updateDisplay();
+    },
+
+    removeItem(name) {
+        this.items = this.items.filter(item => item.name !== name);
+        this.saveCart();
+        this.updateDisplay();
+        this.showNotification(`Removed ${name} from cart`);
+    },
+
+    updateDisplay() {
+        const cartDropdown = document.querySelector('.dropdown-content');
+        const cartEmpty = document.querySelector('.cart-empty');
+        const cartList = document.querySelector('.cart-items');
+        const cartTotal = document.querySelector('.cart-total');
+
+        if (!cartList || !cartEmpty || !cartTotal) return;
+
+        const badge = document.getElementById('cartBadge');
+        const badgeCount = this.items.reduce((s, it) => s + (it.quantity || 0), 0);
+        if (badge) {
+            // pulse animation when increasing
+            const prev = this._lastBadgeCount || 0;
+            badge.textContent = badgeCount;
+            badge.style.display = badgeCount > 0 ? 'inline-flex' : 'none';
+            if (badgeCount > prev) {
+                badge.classList.remove('badge-pulse');
+                // force reflow then add class to restart animation
+                void badge.offsetWidth;
+                badge.classList.add('badge-pulse');
+            }
+            this._lastBadgeCount = badgeCount;
+        }
+        try { localStorage.setItem('farmCartCount', String(badgeCount)); } catch (e) { /* ignore */ }
+
+        if (this.items.length === 0) {
+            cartEmpty.style.display = 'block';
+            cartList.style.display = 'none';
+            cartTotal.style.display = 'none';
+            return;
+        }
+
+        cartEmpty.style.display = 'none';
+        cartList.style.display = 'block';
+
+        let total = 0;
+        cartList.innerHTML = this.items.map(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            return `
+                <div class="cart-item">
+                    <div style="flex:1;">
+                        <div style="font-weight:600">${item.name}</div>
+                        <div style="font-size:12px;color:#666;">${fmtPrice(item.price)}</div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <button class="prod-qty-decrease" onclick="cart.changeQuantity('${item.name}', -1)" aria-label="Decrease quantity">−</button>
+                        <span class="cart-item-qty" aria-live="polite">${item.quantity}</span>
+                        <button class="prod-qty-increase" onclick="cart.changeQuantity('${item.name}', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                    <div style="margin-left:12px;min-width:80px;text-align:right;">$${itemTotal.toFixed(2)}</div>
+                    <button onclick="cart.removeItem('${item.name}')" 
+                            class="remove-btn" 
+                            aria-label="Remove ${item.name} from cart">×</button>
+                </div>
+            `;
+        }).join('');
+
+        cartTotal.style.display = 'block';
+        cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+    },
+
+    saveCart() {
+        localStorage.setItem('farmCart', JSON.stringify(this.items));
+    },
+
+    loadCart() {
+        const saved = localStorage.getItem('farmCart');
+        if (saved) {
+            try {
+                this.items = JSON.parse(saved);
+                this.updateDisplay();
+            } catch (e) {
+                console.error('Error loading cart:', e);
+                this.items = [];
+            }
+        }
+    },
+
+    showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'cart-notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => notification.remove(), 500);
+        }, 1400);
+    }
+};
+
+// Make cart globally available
+window.cart = cart;
+
+// Product modal is handled in the DOMContentLoaded event
+let modal = null;
+
+// Utility: format currency
+function fmtPrice(v) { return '$' + parseFloat(v || 0).toFixed(2); }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize elements
+    const cartBtn = document.getElementById('cartBtn');
+    const cartDropdown = document.querySelector('.dropdown-content');
+    const cartEmpty = document.querySelector('.cart-empty');
+    const cartList = document.querySelector('.cart-items');
+    const cartTotal = document.querySelector('.cart-total');
+    modal = document.querySelector('.product-modal');
+
+    // Add-to-cart helper (reads product qty when passed the button element)
+    function addToCart(name, price, btnElement) {
+        try {
+            let qty = 1;
+            if (btnElement) {
+                const parent = btnElement.closest('.product-actions');
+                const q = parent?.querySelector('.prod-qty');
+                if (q) qty = Math.max(1, parseInt(q.textContent || '1'));
+            }
+            if (window.cart && typeof window.cart.addItem === 'function') {
+                window.cart.addItem(name, price, qty);
+            } else {
+                console.warn('cart.addItem not available');
+            }
+        } catch (err) {
+            console.error('addToCart error', err);
+        }
+    }
+    window.addToCart = addToCart;
+
+    // Expose removeFromCart wrapper
+    window.removeFromCart = function(name) { if (window.cart && typeof window.cart.removeItem === 'function') window.cart.removeItem(name); };
+
+    // Product quantity controls (delegated)
+    document.addEventListener('click', (e) => {
+        const t = e.target;
+        if (t.matches('.prod-qty-increase')) {
+            const span = t.parentElement?.querySelector('.prod-qty');
+            if (span) span.textContent = String((parseInt(span.textContent||'1')||1) + 1);
+        }
+        if (t.matches('.prod-qty-decrease')) {
+            const span = t.parentElement?.querySelector('.prod-qty');
+            if (span) {
+                const val = Math.max(1, (parseInt(span.textContent||'1')||1) - 1);
+                span.textContent = String(val);
+            }
+        }
+    });
+
+    // Product filtering
+    const searchInput = document.querySelector('input[type="search"]');
+    const categorySelect = document.querySelector('select[name="category"]');
+    const priceRange = document.querySelector('input[type="number"]');
+    
+    function filterProducts() {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
+        const category = categorySelect?.value || 'all';
+        const maxPrice = priceRange?.value || Infinity;
+        
+        const products = document.querySelectorAll('.livestock-card');
+        products.forEach(product => {
+            const title = product.querySelector('.livestock-title')?.textContent.toLowerCase() || '';
+            const productCategory = product.dataset.category || '';
+            const price = parseFloat(product.dataset.price || '0');
+            
+            const matchesSearch = title.includes(searchTerm);
+            const matchesCategory = category === 'all' || productCategory === category;
+            const matchesPrice = price <= maxPrice;
+            
+            product.style.display = matchesSearch && matchesCategory && matchesPrice ? 'block' : 'none';
+        });
+    }
+
+    // Add filter event listeners
+    searchInput?.addEventListener('input', filterProducts);
+    categorySelect?.addEventListener('change', filterProducts);
+    priceRange?.addEventListener('input', filterProducts);
+
+    // Modal functionality - supports being called with a product element OR an Event
+    function openModal(productOrEvent) {
+        if (!modal) return;
+
+        // normalize input: if an Event was passed, extract dataset from event.currentTarget
+        let productEl = null;
+        let name = '';
+        let price = '';
+        let desc = '';
+        let img = '';
+        let img2 = '';
+        let img3 = '';
+
+        if (productOrEvent && (productOrEvent.currentTarget || productOrEvent.target)) {
+            // called as event handler (inline onclick or addEventListener)
+            let btn = productOrEvent.currentTarget || productOrEvent.target;
+            if (btn && btn.nodeType === 3) btn = btn.parentElement; // text node -> parent
+            if (btn && btn.closest) btn = btn.closest('button') || btn;
+            // If button has data attributes, use them
+            name = btn?.dataset?.name || '';
+            price = btn?.dataset?.price || '';
+            desc = btn?.dataset?.desc || '';
+            img = btn?.dataset?.img || '';
+            img2 = btn?.dataset?.img2 || '';
+            img3 = btn?.dataset?.img3 || '';
+        } else if (productOrEvent && productOrEvent.dataset) {
+            // called with the product element
+            productEl = productOrEvent;
+            name = productEl.querySelector('h4')?.textContent || productEl.dataset.name || '';
+            price = productEl.dataset.price || '';
+            desc = productEl.querySelector('p')?.textContent || '';
+            img = productEl.dataset.img || '';
+            img2 = productEl.dataset.img2 || '';
+            img3 = productEl.dataset.img3 || '';
+        } else {
+            return;
+        }
+
+        const modalImg = modal.querySelector('#modalImg');
+        const modalTitle = modal.querySelector('#modalTitle');
+        const modalDesc = modal.querySelector('#modalDesc');
+        const modalPrice = modal.querySelector('#modalPrice');
+
+        if (modalImg) modalImg.src = img || '';
+        if (modalTitle) modalTitle.textContent = name;
+        if (modalDesc) modalDesc.textContent = desc;
+        if (modalPrice) modalPrice.textContent = price ? ('$' + parseFloat(price).toFixed(2)) : '';
+
+        // populate thumbnails dynamically
+        const thumbs = modal.querySelectorAll('.thumbnail');
+        if (thumbs && thumbs.length) {
+            thumbs[0].src = img || '';
+            if (thumbs[1]) thumbs[1].src = img2 || img || '';
+            if (thumbs[2]) thumbs[2].src = img3 || img2 || img || '';
+            thumbs.forEach(t => t.classList.remove('active'));
+            if (thumbs[0]) thumbs[0].classList.add('active');
+        }
+
+        modal.style.display = 'flex';
+    }
+
+    // Close modal when clicking outside
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Add click listeners to products
+    document.querySelectorAll('.livestock-card').forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+
+    // Cart functionality
+    cartBtn?.addEventListener('click', () => {
+        cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Checkout button opens modal
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    const checkoutModal = document.getElementById('checkoutModal');
+    const checkoutClose = document.getElementById('checkoutClose');
+    const checkoutSummary = document.getElementById('checkoutSummary');
+    const placeOrderBtn = document.getElementById('placeOrder');
+    const orderMessage = document.getElementById('orderMessage');
+
+    function populateCheckout() {
+        if (!checkoutSummary) return;
+        const items = window.cart?.items || [];
+        if (items.length === 0) {
+            checkoutSummary.innerHTML = '<p>Your cart is empty.</p>';
+            return;
+        }
+        let html = '<ul style="list-style:none;padding:0;margin:0;">';
+        let total = 0;
+        items.forEach(it => {
+            const itTotal = (it.price || 0) * (it.quantity || 1);
+            total += itTotal;
+            html += `<li style="padding:6px 0;border-bottom:1px solid #eee;">${it.name} &times; ${it.quantity} — ${fmtPrice(itTotal)}</li>`;
+        });
+        html += `</ul><div style="text-align:right;margin-top:8px;font-weight:700;">Total: ${fmtPrice(total)}</div>`;
+        checkoutSummary.innerHTML = html;
+    }
+
+    checkoutBtn?.addEventListener('click', (e) => {
+        e.preventDefault();
+        populateCheckout();
+        if (checkoutModal) checkoutModal.style.display = 'flex';
+    });
+    checkoutClose?.addEventListener('click', () => { if (checkoutModal) checkoutModal.style.display = 'none'; });
+
+    placeOrderBtn?.addEventListener('click', () => {
+        // simple validation
+        const name = document.getElementById('custName')?.value?.trim();
+        const email = document.getElementById('custEmail')?.value?.trim();
+        const addr = document.getElementById('custAddress')?.value?.trim();
+        const card = document.getElementById('custCard')?.value?.trim();
+        if (!name || !email || !addr || !card) {
+            orderMessage.style.display = 'block';
+            orderMessage.textContent = 'Please complete all fields.';
+            orderMessage.style.color = 'red';
+            return;
+        }
+
+        // Simulate placing order
+        orderMessage.style.display = 'block';
+        orderMessage.style.color = 'green';
+        orderMessage.textContent = 'Order placed — thank you!';
+        // visual confirmation animation
+        orderMessage.classList.remove('order-confirm');
+        void orderMessage.offsetWidth;
+        orderMessage.classList.add('order-confirm');
+
+        // Clear cart
+        if (window.cart) {
+            window.cart.items = [];
+            window.cart.saveCart();
+            window.cart.updateDisplay();
+        }
+
+        // close after short delay
+        setTimeout(() => {
+            if (checkoutModal) checkoutModal.style.display = 'none';
+            orderMessage.style.display = 'none';
+            document.getElementById('checkoutForm')?.reset();
+        }, 1500);
+    });
+
+    // Close cart when clicking outside
+    document.addEventListener('click', (e) => {
+        if (cartBtn && cartDropdown && !cartBtn.contains(e.target) && !cartDropdown.contains(e.target)) {
+            cartDropdown.style.display = 'none';
+        }
+    });
+
+    // Cart is managed by the cart object defined earlier
+
+    // Initialize cart display
+    if (window.cart && typeof window.cart.updateDisplay === 'function') {
+        window.cart.updateDisplay();
+    }
+});
+
+// Error handling
+window.addEventListener('error', (e) => {
+    console.error('Error:', e.message);
+});
+
+// -- end cleaned JS
+</script>
+
+</body>
+</html>

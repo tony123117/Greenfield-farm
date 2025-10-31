@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Agricultural Hub</title>
+     <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/field.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="green.css">
+</head>
+
+<body>
+    <!-- this is the header section -->
+    <header class="head">
+        <div class="logo-container">
+            <div class="f">FM</div>
+            <div class="farm-info">
+                <h3 class="class farm-title" data-translate="farmTitle">Greenfield Farm</h3>
+                <p class="farm-description" data-translate="farmDescription">Ethical livestock & regenerative plant farming</p>
+            </div>
+        </div>
+        <ul class="heading">
+            <li><a href="#touch" data-translate="about">About</a></li>
+            <li><a href="#livestock" data-translate="livestock">Livestock</a></li>
+            <li><a href="#plants" data-translate="plants">Plants</a></li>
+            <li><a href="#contact" data-translate="contact">Contact</a></li>
+            
+            <a href="shop.html"><button class="shop" data-translate="shop">Shop/CSA</button></a>
+            <select class="language-selector" onchange="setLanguage(this.value)">
+                <option value="english">English</option>
+                <option value="yoruba">Yorùbá</option> 
+                <option value="hausa">Hausa</option>
+                <option value="igbo">Igbo</option>
+            </select>
+        </ul>
+    </header>
+    <!-- end of the header -->
+    <main>
+
+
+        <!-- Image Slider Section -->
+<div class="gallerys">
+
+    <div class="slider-container" role="region" aria-label="Image slider: Our farm — fields, produce, livestock, and farm experience" aria-roledescription="carousel">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')">
+            <div class="slide-caption">
+                <h3>Our Beautiful Fields</h3>
+                <p>Sustainable farming practices in action</p>
+            </div>
+        </div>
+    <div class="slide" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/29/The_Mambilla_Plateau_Highland_Tea_Farm%2C_Nigeria_05.jpg')" aria-label="Mambilla Plateau tea farm, Nigeria - lush green terraces">
+            <div class="slide-caption">
+                <h3>Organic Produce — Nigeria</h3>
+                <p>Fresh harvests from our Nigerian gardens (Mambilla Plateau)</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1472141521881-95d0e87e2e39?auto=format&fit=crop&q=80')">
+            <div class="slide-caption">
+                <h3>Livestock Care</h3>
+                <p>Ethically raised animals in natural environments</p>
+            </div>
+        </div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80')" aria-label="Lush Unsplash farm image representative of Nigerian farms">
+            <div class="slide-caption">
+                <h3>Farm Experience — Nigeria</h3>
+                <p>Connect with nature at our Nigerian farm and learn sustainable practices</p>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button onclick="prevSlide()" class="prev" aria-label="Previous slide">❮</button>
+            <button onclick="nextSlide()" class="next" aria-label="Next slide">❯</button>
+        </div>
+        <div class="slider-dots" role="tablist" aria-label="Slide navigation">
+            <span class="dot active" onclick="showSlide(0)" role="button" tabindex="0" aria-label="Show slide 1"></span>
+            <span class="dot" onclick="showSlide(1)" role="button" tabindex="0" aria-label="Show slide 2"></span>
+            <span class="dot" onclick="showSlide(2)" role="button" tabindex="0" aria-label="Show slide 3"></span>
+            <span class="dot" onclick="showSlide(3)" role="button" tabindex="0" aria-label="Show slide 4"></span>
+        </div>
+    </div>
+</div>
+
+<!-- End of Image Slider Section -->
+
+
+
+        <!-- begining of the pasture div -->
+        <div class="all">
+           
+<div class="d1">
+    <div>
+        <h2 class="gradients-text"><b>From pasture to plate — sustainable livestock & thriving crops</b></h2>
+        <p class="main-description">Family-run regenerative farm specializing in ethically raised animals and organic produce. Join our CSA or visit our farm store.</p>
+    </div>
+<!-- the buttons -->
+    <div class="button-group">
+        <a href=""><button class="btn">Contact Us</button></a>
+        <a href=""><button class="btn2">Explore Livestock</button></a>
+    </div>
+<!-- the boxes -->
+    <div class="info-boxes">
+        <div class="same">
+            <h5>On-Farm Pickup</h5>
+            <p>Weekly pickup and flexible slots.</p>
+        </div>
+        <div class="same">
+            <h5>Regenerative Practices</h5>
+            <p>Soil-first, biodiversity-focused.</p>
+        </div>
+    </div>
+</div>
+<!-- the image div -->
+<div class="img">
+
+</div>
+        </div>
+
+        <!-- the end of the pasture div -->
+
+
+
+        <!-- the begining of the about -->
+         <div class="about-us">
+<div class="about">
+    <div class="half">
+<h2 class="gradient-text">About Greenfield Farm</h2>
+             <p>Established in 1998, Greenfield Farm practices rotational grazing, compost-driven fertility, and crop diversity to create resilient food systems. We prioritize animal welfare and transparent practices.</p>
+             <p>At Greenfield Farm, we believe in sustainable and ethical farming practices. Our family-run farm is dedicated to raising livestock and growing crops in harmony with nature. We prioritize the health of our animals, the soil, and our community.</p>
+ <div class="info-boxes">
+        <div class="same">
+            <h5>Family-owned</h5>
+            <p>Multi-generational farm stewardship.</p>
+        </div>
+        <div class="same">
+            <h5>Local Markets</h5>
+            <p>Supporting regional farmers and artisans.</p>
+        </div>
+        <div class="same">
+            <h5>Fresh Produce</h5>
+            <p>Fresh, seasonal produce from our farm to your table.</p>
+        </div>
+    </div>
+            
+
+    </div>
+    <!-- the image in about -->
+    <div class="img">
+
+</div>
+         </div>
+         </div>
+         
+    <!-- the end of about -->
+
+<!-- Farm Products Section -->
+    <div class="farm-products">
+        <!-- Livestock section -->
+        <div class="livestock">
+            <div class="live">
+                <h2 class="gradient-text" id="shift">Our Livestock</h2>
+                <p style="text-align: center; margin-bottom: 30px; ">Humanely raised, pasture-fed animals available for direct purchase or via CSA shares.</p>
+                <div class="stocks">
+                    <div class="stock">
+                        <div class="in">
+                            <h4 style="font-size: 15px; margin: 0;">Angus Cattle</h4>
+                            <p style="font-size: 10px; margin: 0 0 2px 0;">Grass-fed beef, ethically raised.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                                <p style="font-size: 9px; margin: 0;">Available</p>
+                                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+    <div class="stock">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Heritage Hogs</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Rich-flavored pork from small-batch herds.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">Available</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Inquire</a>
+            </div>
+        </div>
+    </div>
+    <div class="stock">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Pasture Sheep</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Wool and lamb raised on open pastures.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">Available</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Inquire</a>
+            </div>
+        </div>
+    </div>
+    <div class="stock">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Free-Range Poultry</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Fresh eggs and pasture-raised chickens.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">Available</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Inquire</a>
+            </div>
+        </div>
+                        </div>
+                </div>
+            </div> <!-- end of stocks -->
+        </div> <!-- end of live -->
+    </div> <!-- end of livestock -->
+</div> <!-- end of farm-products -->
+
+<!-- this is the crops and plant div -->
+<div class="crops">
+<h2 class="gradients-text" style="margin-left: 50px;">Crops & Plants</h2>
+<p style="margin-left: 60px; color: white;">Seasonal vegetables, herbs, and orchard fruit grown using organic methods.</p>
+<div class="plants">
+    <div class="plant">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Heirloom Tomatoes</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Vibrant tomatoes for market and CSA.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">CSA</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Order</a>
+            </div>
+        </div>
+    </div>
+    <div class="plant">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Apple Orchard</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Organic orchards producing sweet apples.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">CSA</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Order</a>
+            </div>
+        </div>
+    </div>
+    <div class="plant">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Herb Beds</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Basil, rosemary, thyme and more.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">CSA</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">order</a>
+            </div>
+        </div>
+    </div>
+       <div class="plant">
+        <div class="in">
+            <h4 style="font-size: 15px; margin: 0;">Dairy Goats</h4>
+            <p style="font-size: 10px; margin: 0 0 2px 0;">Milk and cheese from happy goats.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 30px; margin-top: auto;">
+                <p style="font-size: 9px; margin: 0;">Available</p>
+                <a href="" style="font-size: 9px; text-decoration: none; color: #2E8B57;">Inquire</a>
+            </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The beginning of the service div -->
+<!-- Services Section -->
+ <div class="serve">
+    <h2 class="gradient-text" style="padding-left: 10px;">Our Services</h2>
+    <div class="cards">
+        <div class="service-card">
+            <h3>CSA Subscriptions</h3>
+            <p>Weekly boxes of seasonal produce and rotating meat add-ons.</p>
+        </div>
+        <div class="service-card">
+            <h3>Farm Tours & Workshops</h3>
+            <p>Book a guided tour or a workshop on regenerative farming.</p>
+        </div>
+    </div>
+</div>
+    
+<!-- End of Services Section -->
+
+<!-- the beginning of the gallery div -->
+ <div class="gallery">
+    <h2 style="padding-left: 0px;" class="gradient-text-alt">Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+
+        </div>
+        <div class="gallery-item">
+       
+        </div>
+        <div class="gallery-item">
+          
+        </div>
+         <div class="gallery-item">
+          
+        </div>
+    </div>
+ </div>
+
+<!--  the end of the gallery -->
+
+<!-- Farm Map Section -->
+<div class="farm-map-section">
+    <div class="farm-map-container">
+        <div class="farm-map-header">
+            <h2 class="gradient-text">Nigerian Agricultural Regions</h2>
+            <p>Explore farming regions and their specialized crops across Nigeria</p>
+        </div>
+        
+        <div class="map-interface">
+            <div class="map-area">
+                <svg class="map-svg" viewBox="0 0 800 600">
+                    <!-- Northern Region -->
+                    <path class="map-location" id="northern-region"
+                        d="M100,50 L700,50 L600,200 L200,200 Z"
+                        fill="#f4a261" data-name="Northern Region"
+                        data-description="Millet, Sorghum, Groundnuts, Cotton | Climate: Hot, Semi-arid | Rainfall: 500-1000mm annually">
+                    </path>
+                    
+                    <!-- Middle Belt -->
+                    <path class="map-location" id="middle-belt"
+                        d="M200,200 L600,200 L550,350 L250,350 Z"
+                        fill="#2a9d8f" data-name="Middle Belt"
+                        data-description="Yam, Cassava, Maize, Rice | Climate: Tropical | Rainfall: 1000-1500mm annually">
+                    </path>
+                    
+                    <!-- Southern Region -->
+                    <path class="map-location" id="southern-region"
+                        d="M250,350 L550,350 L500,500 L300,500 Z"
+                        fill="#264653" data-name="Southern Region"
+                        data-description="Cocoa, Oil Palm, Rubber, Cassava | Climate: Tropical Rainforest | Rainfall: 1500-2000mm annually">
+                    </path>
+                    
+                    <!-- Coastal Region -->
+                    <path class="map-location" id="coastal-region"
+                        d="M300,500 L500,500 L550,550 L250,550 Z"
+                        fill="#e9c46a" data-name="Coastal Region"
+                        data-description="Fish Farming, Coconut, Plantain | Climate: Coastal | Rainfall: 2000-4000mm annually">
+                    </path>
+                    
+                    <!-- Jos Plateau -->
+                    <circle class="map-location" id="jos-plateau"
+                        cx="400" cy="250" r="30"
+                        fill="#e76f51" data-name="Jos Plateau"
+                        data-description="Irish Potato, Vegetables, Fruits | Climate: Highland | Average Temperature: 22°C">
+                    </circle>
+                    
+                    <!-- Major Markets -->
+                    <circle class="map-location market" cx="300" cy="150" r="10" fill="#2196f3" data-name="Kano Market" data-description="Major grain and livestock market"/>
+                    <circle class="map-location market" cx="450" cy="300" r="10" fill="#2196f3" data-name="Onitsha Market" data-description="Large produce and goods market"/>
+                    <circle class="map-location market" cx="350" cy="450" r="10" fill="#2196f3" data-name="Lagos Market" data-description="International trade hub"/>
+                </svg>
+                <div class="map-tooltip"></div>
+            </div>
+            
+            <div class="map-legend">
+                <h3 class="legend-title">Farm Areas</h3>
+                <div class="legend-items">
+                    <div class="legend-item" data-target="vegetable-gardens">
+                        <span class="legend-color" style="background-color: #4caf50"></span>
+                        <span class="legend-text">Vegetable Gardens</span>
+                    </div>
+                    <div class="legend-item" data-target="orchard">
+                        <span class="legend-color" style="background-color: #8bc34a"></span>
+                        <span class="legend-text">Apple Orchard</span>
+                    </div>
+                    <div class="legend-item" data-target="livestock">
+                        <span class="legend-color" style="background-color: #795548"></span>
+                        <span class="legend-text">Livestock Pastures</span>
+                    </div>
+                    <div class="legend-item" data-target="csa-pickup">
+                        <span class="legend-color" style="background-color: #ff5722"></span>
+                        <span class="legend-text">CSA Pickup Point</span>
+                    </div>
+                    <div class="legend-item" data-target="farm-store">
+                        <span class="legend-color" style="background-color: #2196f3"></span>
+                        <span class="legend-text">Farm Store</span>
+                    </div>
+                    <div class="legend-item" data-target="herb-garden">
+                        <span class="legend-color" style="background-color: #9c27b0"></span>
+                        <span class="legend-text">Herb Garden</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimonials">
+    <h2 class="gradients-text">What Our Customers Say</h2>
+    <div class="testimonials-container">
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"The quality of produce from Greenfield Farm is exceptional. Their CSA program has transformed how our family eats."</p>
+                <h4>Dr. kanayo somtochukwu.</h4>
+                <p class="customer-type">CSA Member</p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"Their commitment to sustainable farming practices and animal welfare is evident in everything they do."</p>
+                <h4>Mr. Fedrick Okorie.</h4>
+                <p class="customer-type">Regular Customer</p>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"The farm tours were educational and inspiring. A must-visit for anyone interested in sustainable agriculture!"</p>
+                <h4>Maduba Esther.</h4>
+                <p class="customer-type">Workshop Participant</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Section -->
+<div class="blog-section">
+    <div class="blog-container">
+        <div class="blog-header">
+            <h2 class="gradients-text">Farm Stories & Tips</h2>
+            <p>Discover farming insights, seasonal updates, and delicious recipes</p>
+        </div>
+        
+        <div class="blog-categories">
+            <button class="category-button active">All Posts</button>
+            <button class="category-button">Farming Tips</button>
+            <button class="category-button">Seasonal Updates</button>
+            <button class="category-button">Farm-to-Table Recipes</button>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Farming Tips Post -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Sustainable Farming" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Farming Tips</span>
+                    <h3 class="blog-title">Essential Fall Planting Guide</h3>
+                    <p class="blog-excerpt">Learn the best practices for preparing your garden for fall planting, including soil preparation and crop selection for the cooler months.</p>
+                    <div class="blog-meta">
+                        <span>October 25, 2025</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seasonal Update Post -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1595166472913-4992abf4704a" alt="Fall Harvest" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Seasonal Updates</span>
+                    <h3 class="blog-title">Fall Harvest Highlights</h3>
+                    <p class="blog-excerpt">Explore what's fresh this season: from crisp apples to hearty squashes. Get updates on our latest harvest and upcoming CSA offerings.</p>
+                    <div class="blog-meta">
+                        <span>October 20, 2025</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Post -->
+            <div class="blog-card">
+                <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803" alt="Farm Fresh Recipe" class="blog-image">
+                <div class="blog-content">
+                    <span class="blog-category">Farm-to-Table Recipes</span>
+                    <h3 class="blog-title">Autumn Vegetable Soup</h3>
+                    <p class="blog-excerpt">A warming recipe featuring our farm-fresh root vegetables and herbs. Perfect for cool autumn evenings and family gatherings.</p>
+                    <div class="blog-meta">
+                        <span>October 18, 2025</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Seasonal Calendar Section -->
+<div class="calendar-section">
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <h2 class="gradient-text">Nigerian Farming Calendar</h2>
+            <p>Explore our seasonal crops and traditional farming events</p>
+        </div>
+
+        <div class="calendar-tabs">
+            <button class="season-tab active" data-season="wetSeason">Wet Season (Apr-Oct)</button>
+            <button class="season-tab" data-season="drySeason">Dry Season (Nov-Mar)</button>
+            <button class="season-tab" data-season="harmattan">Harmattan (Dec-Feb)</button>
+        </div>
+
+        <div class="season-content active" id="wetSeason">
+            <div class="season-grid">
+                <div class="produce-card">
+                    <div class="produce-header">
+                        <div class="produce-icon">🥬</div>
+                        <h3 class="produce-title">Vegetables</h3>
+                    </div>
+                    <ul class="produce-list">
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Pumpkins & Winter Squash
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Root Vegetables
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot coming-soon"></span>
+                            Late Season Greens
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="produce-card">
+                    <div class="produce-header">
+                        <div class="produce-icon">🍎</div>
+                        <h3 class="produce-title">Fruits</h3>
+                    </div>
+                    <ul class="produce-list">
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Apples
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Pears
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot coming-soon"></span>
+                            Late Berries
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="produce-card">
+                    <div class="produce-header">
+                        <div class="produce-icon">🥚</div>
+                        <h3 class="produce-title">Farm Products</h3>
+                    </div>
+                    <ul class="produce-list">
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Fresh Eggs
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot available"></span>
+                            Honey
+                        </li>
+                        <li class="produce-item">
+                            <span class="availability-dot coming-soon"></span>
+                            Preserves
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="events-timeline">
+                <h3 class="gradients-text">Upcoming Events</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 5</div>
+                    <div class="timeline-content">
+                        <h4>Fall Harvest Festival</h4>
+                        <p>Join us for pumpkin picking, hay rides, and fresh apple cider.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 15</div>
+                    <div class="timeline-content">
+                        <h4>Preserving Workshop</h4>
+                        <p>Learn traditional methods of preserving fall harvest.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 25</div>
+                    <div class="timeline-content">
+                        <h4>Thanksgiving Market</h4>
+                        <p>Special market day for Thanksgiving ingredients and preparations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nigerian seasons content containers -->
+        <div class="season-content" id="drySeason"></div>
+        <div class="season-content" id="harmattan"></div>
+    </div>
+</div>
+
+<!-- Weather & Tools Section -->
+<div class="farming-tools-section">
+    <div class="tools-container">
+        <!-- Weather Widget -->
+        <div class="weather-widget">
+            <h3>Farming Weather</h3>
+            <div class="weather-content">
+                <div class="current-weather">
+                    <div class="weather-icon">🌤️</div>
+                    <div class="weather-info">
+                        <div class="temperature">28°C</div>
+                        <div class="conditions">Partly Cloudy</div>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <span>Humidity:</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="detail">
+                        <span>Rainfall:</span>
+                        <span>60mm</span>
+                    </div>
+                    <div class="detail">
+                        <span>Soil Temp:</span>
+                        <span>24°C</span>
+                    </div>
+                </div>
+                <div class="farming-tips">
+                    <h4>Today's Farming Tips</h4>
+                    <p>Ideal conditions for planting cassava and yam. Consider irrigation for newly planted crops.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Planting Calculator -->
+        <div class="planting-calculator">
+            <h3 class="gradients-text">Crop Planting Calculator</h3>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="crop-select" style="color: white;">Select Crop:</label>
+                    <select id="crop-select">
+                        <option value="">Choose a crop...</option>
+                        <option value="cassava">Cassava</option>
+                        <option value="yam">Yam</option>
+                        <option value="maize">Maize</option>
+                        <option value="rice">Rice</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="region-select"  style="color: white;">Region:</label>
+                    <select id="region-select">
+                        <option value="">Select region...</option>
+                        <option value="north">Northern Nigeria</option>
+                        <option value="south">Southern Nigeria</option>
+                        <option value="middle">Middle Belt</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="plot-size"  style="color: white;">Plot Size (hectares):</label>
+                    <input type="number" id="plot-size" min="0.1" step="0.1">
+                </div>
+                <button class="calculate-btn">Calculate Planting Guide</button>
+            </div>
+            <div class="calculator-results" style="display: none;">
+                <h4>Planting Recommendations</h4>
+                <div class="results-content"></div>
+            </div>
+        </div>
+
+        <!-- Market Price Tracker -->
+        <div class="market-tracker">
+            <h3>Market Price Tracker</h3>
+            <div class="price-table">
+                <div class="price-header">
+                    <span>Crop</span>
+                    <span>Current Price/kg</span>
+                    <span>Trend</span>
+                </div>
+                <div class="price-row">
+                    <span>Yam</span>
+                    <span>₦350</span>
+                    <span class="trend-up">↑ 5%</span>
+                </div>
+                <div class="price-row">
+                    <span>Cassava</span>
+                    <span>₦200</span>
+                    <span class="trend-down">↓ 2%</span>
+                </div>
+                <div class="price-row">
+                    <span>Rice</span>
+                    <span>₦500</span>
+                    <span class="trend-stable">→</span>
+                </div>
+            </div>
+            <button class="view-all-prices">View All Prices</button>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="stats-section">
+    <div class="stats-container">
+        <div class="stat-item">
+            <div class="stat-number">25+</div>
+            <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Happy CSA Members</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Organic Practices</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Seasonal Products</div>
+        </div>
+    </div>
+</div>
+
+<!-- Community Section -->
+<div class="community-section">
+    <div class="community-container">
+        <h2 class="gradient-text">Farming Community Hub</h2>
+        <p>Connect, learn, and share with fellow farmers across Nigeria</p>
+
+        <!-- Expert Q&A Section -->
+        <div class="qa-section">
+            <h3>Ask the Experts</h3>
+            <div class="expert-profiles">
+                <div class="expert-card">
+                    <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c" alt="Expert 1" class="expert-image">
+                    <div class="expert-info">
+                        <h4>Dr. Adebayo</h4>
+                        <p>Soil Scientist</p>
+                        <button class="ask-question-btn">Ask a Question</button>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91" alt="Expert 2" class="expert-image">
+                    <div class="expert-info">
+                        <h4>Prof. Okonkwo</h4>
+                        <p>Crop Specialist</p>
+                        <button class="ask-question-btn">Ask a Question</button>
+                    </div>
+                </div>
+                <div class="expert-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Expert 3" class="expert-image">
+                    <div class="expert-info">
+                        <h4>Dr. Ibrahim</h4>
+                        <p>Agricultural Economics</p>
+                        <button class="ask-question-btn">Ask a Question</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Farmer Forums -->
+        <div class="forum-section">
+            <h3>Farmer Forums</h3>
+            <div class="forum-categories">
+                <div class="forum-category">
+                    <h4>Crop Discussion</h4>
+                    <ul class="forum-topics">
+                        <li>
+                            <span class="topic-title">Best practices for cassava farming 🌱</span>
+                            <span class="topic-stats">23 replies • Active</span>
+                        </li>
+                        <li>
+                            <span class="topic-title">Dealing with this season's rainfall ☔</span>
+                            <span class="topic-stats">45 replies • Hot</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="forum-category">
+                    <h4>Market Insights</h4>
+                    <ul class="forum-topics">
+                        <li>
+                            <span class="topic-title">Current yam prices in Lagos 💰</span>
+                            <span class="topic-stats">12 replies • New</span>
+                        </li>
+                        <li>
+                            <span class="topic-title">Export opportunities 🌍</span>
+                            <span class="topic-stats">34 replies • Active</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="view-all-topics">View All Topics</button>
+        </div>
+
+        <!-- Success Stories -->
+        <div class="success-stories">
+            <h3>Success Stories</h3>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1592595896616-c37162298647" alt="Success Story 1" class="story-image">
+                    <div class="story-content">
+                        <h4>From Small Farm to Major Supplier</h4>
+                        <p class="story-preview">How a family farm in Oyo State transformed into a major cassava supplier...</p>
+                        <div class="story-meta">
+                            <span class="region">Oyo State</span>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-card">
+                    <img src="https://images.unsplash.com/photo-1595166472913-4992abf4704a" alt="Success Story 2" class="story-image">
+                    <div class="story-content">
+                        <h4>Innovation in Rice Farming</h4>
+                        <p class="story-preview">Adopting modern techniques helped this Kebbi State farmer increase yield by 300%...</p>
+                        <div class="story-meta">
+                            <span class="region">Kebbi State</span>
+                            <button class="read-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="view-all-stories">View All Success Stories</button>
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="newsletter">
+    <div class="newsletter-content">
+        <h2>Stay Connected with Our Farm</h2>
+        <p>Subscribe to our newsletter for seasonal updates, special offers, and farming insights.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</div>
+
+<!-- the beginning of the questioner -->
+ <div class="touch">
+    <h2 class="gradient-text-alt">Get in Touch</h2>
+    <p>Questions about availability, orders, or tours? Send us a message.</p>
+    <div class="form-group">
+        <input type="text" placeholder="Your Name" style="width: calc(50% - 30px);">
+        <input type="email" placeholder="Email" style="width: calc(50% - 30px);">
+        <input type="tel" placeholder="Phone Number (Optional)" style="width: calc(50% - 30px);">
+        <input type="text" placeholder="Subject" style="width: calc(50% - 30px);">
+        <select style="width: calc(50% - 30px); min-width: 280px; height: 40px; border-radius: 5px; border: 1px solid #ddd; padding: 0 15px;">
+            <option value="">Select Inquiry Type</option>
+            <option value="livestock">Livestock Purchase</option>
+            <option value="produce">Plant Produce Order</option>
+            <option value="csa">CSA Subscription</option>
+            <option value="tour">Tour Booking</option>
+        </select>
+        <textarea style="width: 100%; min-height: 120px; border-radius: 5px; border: 1px solid #ddd; padding: 15px; resize: vertical;" placeholder="Your Message"></textarea>
+    </div>
+    <div class="side">
+        <p style="margin-top: 20px;">Or reach us at (555) 123-4567 or visit our farm store.</p>
+    <button type="submit" style="background-color: #2E8B57; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; margin-top: 20px; margin-bottom: 40px;">Send Message</button>
+    </div>
+    
+    <marquee behavior="" direction="left">We'd love to hear from you! Whether you have questions about our farm, want to learn more about our practices, or are interested in placing an order, feel free to reach out.</marquee>
+
+ </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-left">
+        <h3>Greenfield Farm</h3>
+        <p>123 Farm Road, Countryside — Open Mon–Sat</p>
+    </div>
+    <div class="footer-right">
+        <p>© 2025 Greenfield Farm — All rights reserved</p>
+    </div>
+</footer>
+
+<script src="green.js"></script>
+</body>
+</html>

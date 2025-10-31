@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmConnect Login</title>
+   <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/farmer.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background-image: 
+        linear-gradient(rgba(0, 60, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('https://upload.wikimedia.org/wikipedia/commons/2/29/The_Mambilla_Plateau_Highland_Tea_Farm%2C_Nigeria_05.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInBg 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInBg {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 50px;
+      width: 360px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeUp 1.2s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .logo {
+      font-size: 42px;
+      color: #3b7a2c;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: #4a5e38;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #2f4f1f;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #2f4f1f;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #3b7a2c;
+      box-shadow: 0 0 8px rgba(59, 122, 44, 0.4);
+    }
+
+    .password-toggle {
+      position: relative;
+    }
+
+    .password-toggle button {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3b7a2c;
+    }
+
+    button {
+      width: 100%;
+      background: linear-gradient(135deg, #4caf50, #3b7a2c);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #3b7a2c, #2f5d21);
+      box-shadow: 0 0 15px rgba(59, 122, 44, 0.5);
+      transform: scale(1.03);
+    }
+
+    p {
+      text-align: center;
+      margin-top: 16px;
+      color: #2f4f1f;
+      font-size: 14px;
+    }
+
+    a {
+      color: #3b7a2c;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      display: none;
+      background: #ffefef;
+      color: #b00020;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .success-message {
+      display: none;
+      background: #d8f3dc;
+      color: #2f4f1f;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-weight: 600;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">🌿</div>
+    <div class="tagline">Welcome back to FarmConnect</div>
+    <h2>Login to Your Account</h2>
+    <form onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group password-toggle">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button type="button" onclick="togglePassword()">👁</button>
+      </div>
+      <a href="green.html"><button type="submit">Login</button></a>
+      <div class="error-message" id="error-msg">❌ Incorrect email or password!</div>
+      <div class="success-message" id="success-msg">✅ Login successful! Redirecting...</div>
+      <p>Don’t have an account? <a href="register.html">Register</a></p>
+      <p><a href="#">Forgot Password?</a></p>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      passwordField.type = passwordField.type === "password" ? "text" : "password";
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorMsg = document.getElementById("error-msg");
+      const successMsg = document.getElementById("success-msg");
+
+      errorMsg.style.display = "none";
+      successMsg.style.display = "none";
+
+      // Simple fake check for demonstration
+      if (email === "arum200909@gmail.com" && password === "4cCyU6D***") {
+        successMsg.style.display = "block";
+        setTimeout(() => window.location.href = "green.html", 2500);
+      } else {
+        errorMsg.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

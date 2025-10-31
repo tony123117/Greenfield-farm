@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+   <title> GREENFIELD FARM — Registration</title>
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/farm.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent-1:#2f6f22;
+      --accent-2:#77b86a;
+      --muted:#6b7b61;
+      --card-bg: rgba(255,255,255,0.95);
+      --radius:14px;
+    } 
+
+    /* Page + background */
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Arial;color:#123012}
+    body{
+      background-image:
+        linear-gradient(180deg, rgba(6,45,12,0.36), rgba(0,0,0,0.32)),
+        url('https://upload.wikimedia.org/wikipedia/commons/2/29/The_Mambilla_Plateau_Highland_Tea_Farm%2C_Nigeria_05.jpg');
+      background-size:cover; background-position:center;
+      display:flex; align-items:center; justify-content:center; padding:22px;
+    }
+
+    /* subtle pan overlay */
+    .bg-pan{ position:fixed; inset:0; pointer-events:none; z-index:0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      animation: pan 30s linear infinite;
+    }
+    @keyframes pan { 0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }
+
+    /* container */
+    .container{ position:relative; z-index:3; width:100%; max-width:980px; display:grid; grid-template-columns:1fr 420px; gap:24px; align-items:stretch; }
+    @media (max-width:900px){ .container{ grid-template-columns: 1fr; } }
+
+    /* left panel */
+    .left {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      padding:28px; border-radius:var(--radius); color:#fff; box-shadow:0 12px 36px rgba(6,18,6,0.35);
+      display:flex; flex-direction:column; gap:16px; min-height:420px; overflow:hidden;
+    }
+    .brand{ display:flex; gap:12px; align-items:center }
+    .logo{ width:66px;height:66px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;background:linear-gradient(135deg,var(--accent-2),var(--accent-1)); box-shadow:0 8px 20px rgba(47,111,34,0.22) }
+    .hero{ font-size:32px; margin:0; line-height:1; text-shadow:0 6px 20px rgba(0,0,0,0.45) }
+    .sub{ color: #eef6ea; opacity:0.95; margin-top:4px; max-width:48ch }
+
+    .art{ margin-top:auto; filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5)); transform-origin:center; animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
+
+    /* right card */
+    .card{ background:var(--card-bg); padding:20px; border-radius:16px; box-shadow:0 12px 40px rgba(6,18,6,0.28); min-width:500px; }
+    .card h2{ margin:0;color:var(--accent-1); font-size:20px }
+    .lead{ margin:4px 0 12px; color:var(--muted); font-size:13px }
+
+    /* step indicator */
+    .steps-ind{ display:flex; gap:8px; margin-bottom:12px }
+    .dot{flex:1;padding:8px;border-radius:10px;background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));text-align:center;font-weight:600;color:#4e5f44;font-size:13px}
+    .dot.active{ background:linear-gradient(90deg,var(--accent-2),var(--accent-1)); color:#fff; box-shadow:0 8px 18px rgba(47,111,34,0.18) }
+
+    /* step panels */
+    .step { display:none; gap:12px }
+    .step.active { display:block }
+
+    label{ display:block; font-weight:600; margin-bottom:6px; color:#314827; font-size:13px }
+    input,select,textarea{ width:90%; padding:10px 12px; border-radius:10px; border:1px solid #d6dfd0; background:transparent; font-size:14px; outline:none; transition:box-shadow .15s,border-color .15s }
+    input:focus,select:focus,textarea:focus{ border-color:var(--accent-1); box-shadow:0 10px 28px rgba(47,111,34,0.08) }
+
+    .row{ display:flex; gap:10px }
+    .row .col{ flex:1 }
+
+    .muted{ color:var(--muted); font-size:13px }
+
+    .actions{ display:flex; gap:10px; margin-top:12px; align-items:center }
+    .btn{ border:0; cursor:pointer; padding:10px 14px; border-radius:10px; font-weight:700; background:linear-gradient(90deg,var(--accent-2),var(--accent-1)); color:#fff; box-shadow:0 8px 22px rgba(47,111,34,0.14) }
+    .btn.ghost{ background:transparent; color:var(--accent-1); border:1px solid rgba(47,111,34,0.08); box-shadow:none; font-weight:600 }
+
+    /* small btn */
+    .small{ padding:8px 10px; font-size:13px; border-radius:8px }
+
+    /* password meter */
+    .pw-meter{ height:8px; border-radius:8px; background:#ecf2ea; overflow:hidden; margin-top:8px }
+    .pw-fill{ height:100%; width:0%; transition:width .22s, background .22s }
+
+    .input-icon{ position:relative }
+    .input-icon svg{ position:absolute; right:10px; top:50%; transform:translateY(-50%); width:18px;height:18px; opacity:0.8 }
+
+    /* toast */
+    .toast{ position:fixed; right:20px; bottom:20px; background:linear-gradient(90deg,#e6fbeb,#d8f3dc); color:#0f4d1b; padding:12px 16px; border-radius:12px; box-shadow:0 12px 36px rgba(8,25,8,0.28); transform:translateY(12px); opacity:0; pointer-events:none; transition:all .36s }
+    .toast.show{ transform:translateY(0); opacity:1; pointer-events:auto }
+
+    /* focus outline for keyboard nav */
+    :focus{ outline:3px solid rgba(107,139,92,0.12); outline-offset:3px; border-radius:8px }
+
+    /* small note */
+    .small-note{ font-size:12px; color:#6d7b61 }
+
+  </style>
+</head>
+<body>
+  <div class="bg-pan" aria-hidden="true"></div>
+
+  <div class="container" role="main" aria-labelledby="title">
+    <!-- left: branding & illustration -->
+    <aside class="left" aria-hidden="false">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🌿</div>
+        <div>
+          <div style="font-weight:700;font-size:18px;color:#fff">Green field</div>
+          <div style="font-size:13px;color:#e8f4e8">Grow. Share. Thrive — connect farms and community.</div>
+        </div>
+      </div>
+
+      <h1 id="title" class="hero">Welcome to your farm’s new digital field</h1>
+      <p class="sub">Register to list produce, manage harvests and connect with trusted buyers.</p>
+
+      <svg class="art" viewBox="0 0 800 160" width="100%" height="140" role="img" aria-label="illustration of fields and sun">
+        <defs>
+          <linearGradient id="g2" x1="0" x2="1">
+            <stop offset="0" stop-color="#9ed882"/>
+            <stop offset="1" stop-color="#3b7a2c"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="160" rx="12" fill="url(#g2)"/>
+        <g fill="#fff" opacity="0.12" transform="translate(20,24)">
+          <path d="M0 30C70 10 140 10 210 30v30H0z"/>
+          <path d="M0 70C70 50 140 50 210 70v30H0z"/>
+          <path d="M230 20C300 0 370 0 440 20v30H230z"/>
+        </g>
+      </svg>
+    </aside>
+
+    <!-- right: registration card -->
+    <section class="card" aria-labelledby="regHeader">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div>
+          <h2 id="regHeader">Create an account</h2>
+          <div class="lead">Quick, friendly and secure — under a minute.</div>
+        </div>
+        <div class="small-note">Step <strong id="stepNum">1</strong> / 3</div>
+      </div>
+
+      <div class="steps-ind" aria-hidden="true">
+        <div class="dot active" data-step="1">Personal</div>
+        <div class="dot" data-step="2">Farm</div>
+        <div class="dot" data-step="3">Confirm</div>
+      </div>
+
+      <!-- STEP 1 -->
+      <form id="mainForm" novalidate>
+        <section class="step active" data-step="1" aria-label="Personal info">
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="Adaeze Okonkwo" required>
+
+          <label for="role">Role</label>
+          <select id="role" name="role" required>
+            <option value="">Choose — Farmer / Buyer</option>
+            <option>Farmer</option>
+            <option>Farm Manager</option>
+            <option>Buyer</option>
+            <option>Cooperative</option>
+          </select>
+
+          <label for="email">Email</label>
+          <div class="input-icon">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@farmconnect.org" required>
+            <svg id="emailOk" viewBox="0 0 24 24" fill="none" style="display:none">
+              <path d="M5 12l4 4L19 6" stroke="#2f7a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="muted">We’ll send a confirmation link to this address.</div>
+
+          <div class="row" style="margin-top:10px">
+            <div class="col">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+234 801 234 5678" autocomplete="tel">
+              <div class="muted">Include country code for verification.</div>
+            </div>
+
+            <div class="col">
+              <label for="password">Password</label>
+              <div style="position:relative;">
+                <input id="password" name="password" type="password" placeholder="Create a secure password" aria-describedby="pwHelp" required>
+                <button type="button" id="togglePw" class="btn ghost small" style="position:absolute;right:6px;top:6px">Show</button>
+              </div>
+              <div id="pwHelp" class="muted">8+ chars, mix upper & lower case and numbers recommended.</div>
+              <div class="pw-meter"><div id="pwFill" class="pw-fill" style="background:linear-gradient(90deg,#ffd08a,#ffb74d)"></div></div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="nextToFarm" class="btn">Next: Farm details →</button>
+            <button type="button" id="demo" class="btn ghost small">Auto-fill demo</button>
+          </div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="step" data-step="2" aria-label="Farm info">
+          <div style="display:flex;gap:10px;align-items:center">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20" stroke="#3b7a2c" stroke-width="1.4" stroke-linecap="round"/><path d="M4 12h16" stroke="#3b7a2c" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <strong>Farm details</strong>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="farmName">Farm name</label>
+              <input id="farmName" name="farmName" placeholder="Mambilla Highlands Tea Farm">
+            </div>
+            <div class="col">
+              <label for="farmSize">Farm size</label>
+              <input id="farmSize" name="farmSize" placeholder="e.g., 12 hectares">
+            </div>
+          </div>
+
+          <label for="location">Location (town, state)</label>
+          <input id="location" name="location" placeholder="Gashaka, Taraba">
+
+          <label for="crops">Main crops / produce</label>
+          <input id="crops" name="crops" placeholder="Tea, Vegetables, Maize">
+          <div class="muted">Comma-separated (e.g., Tea, Herbs)</div>
+
+          <div class="actions">
+            <button type="button" id="backToPersonal" class="btn ghost small">← Back</button>
+            <button type="button" id="toConfirm" class="btn">Next: Review →</button>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="step" data-step="3" aria-label="Confirm">
+          <strong>Review & Submit</strong>
+          <p class="muted">Check details below. You can still go back to edit.</p>
+
+          <div style="margin-top:10px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(117,168,97,0.06), rgba(0,0,0,0.02))">
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+              <div><small class="muted">Full name</small><div id="revName" style="font-weight:700"></div></div>
+              <div><small class="muted">Role</small><div id="revRole"></div></div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+              <div><small class="muted">Email</small><div id="revEmail"></div></div>
+              <div><small class="muted">Phone</small><div id="revPhone"></div></div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+              <div><small class="muted">Farm</small><div id="revFarm"></div></div>
+              <div><small class="muted">Location</small><div id="revLoc"></div></div>
+            </div>
+
+            <div><small class="muted">Main crops</small><div id="revCrops"></div></div>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="backToFarm" class="btn ghost small">← Back</button>
+            <button type="submit" id="submitBtn" class="btn">Create account</button>
+          </div>
+
+          <div class="muted" style="margin-top:10px;font-size:13px">By creating an account you accept our <a href="#" style="color:var(--accent-1)">Terms</a> & <a href="#" style="color:var(--accent-1)">Privacy</a>.</div>
+        </section>
+      </form>
+    </section>
+  </div>
+
+  <!-- toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="margin-right:8px"><path d="M20 6L9 17l-5-5" stroke="#1d6b2d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div><strong>Registration complete!</strong><div class="muted" style="font-size:12px">Welcome — check your email for verification.</div></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // elements
+      const steps = Array.from(document.querySelectorAll('.step'));
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      const stepNum = document.getElementById('stepNum');
+      const toast = document.getElementById('toast');
+
+      const fullname = document.getElementById('fullname');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+      const password = document.getElementById('password');
+      const pwFill = document.getElementById('pwFill');
+      const emailOk = document.getElementById('emailOk');
+
+      const nextToFarm = document.getElementById('nextToFarm');
+      const backToPersonal = document.getElementById('backToPersonal');
+      const toConfirm = document.getElementById('toConfirm');
+      const backToFarm = document.getElementById('backToFarm');
+      const submitBtn = document.getElementById('submitBtn');
+      const demo = document.getElementById('demo');
+      const togglePw = document.getElementById('togglePw');
+      const form = document.getElementById('mainForm');
+
+      let current = 0; // index for steps array (0..2)
+
+      function show(index){
+        steps.forEach((s,i)=> s.classList.toggle('active', i===index));
+        dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+        current = index;
+        stepNum.textContent = (index+1);
+      }
+      show(0);
+
+      // basic validators
+      function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+      function validPhone(v){ return v ? v.replace(/\D/g,'').length >= 7 : true; } // phone optional
+      function pwScore(v){
+        if(!v) return 0;
+        let score=0;
+        if(v.length>=8) score++;
+        if(/[0-9]/.test(v)) score++;
+        if(/[A-Z]/.test(v) && /[a-z]/.test(v)) score++;
+        return Math.min(3,score);
+      }
+
+      // live updates
+      email.addEventListener('input', e => {
+        const ok = validEmail(e.target.value);
+        email.classList.toggle('valid', ok);
+        email.classList.toggle('invalid', !ok && e.target.value.length>0);
+        if(ok){ emailOk.style.display='block' } else { emailOk.style.display='none' }
+      });
+
+      password.addEventListener('input', e=>{
+        const score = pwScore(e.target.value);
+        pwFill.style.width = (score/3*100) + '%';
+        if(score<=1) pwFill.style.background = 'linear-gradient(90deg,#ffb3b3,#ff6b6b)';
+        else if(score===2) pwFill.style.background = 'linear-gradient(90deg,#ffd08a,#ffb74d)';
+        else pwFill.style.background = 'linear-gradient(90deg,#b3e99b,#4caf50)';
+      });
+
+      // show/hide password
+      togglePw.addEventListener('click', () => {
+        const t = password.type === 'password' ? 'text' : 'password';
+        password.type = t; togglePw.textContent = t==='text' ? 'Hide' : 'Show';
+      });
+
+      // navigation buttons
+      nextToFarm.addEventListener('click', () => {
+        // validate step1 required fields
+        if(fullname.value.trim().length < 2){ alert('Please enter your full name.'); fullname.focus(); return; }
+        if(!validEmail(email.value)){ alert('Please enter a valid email.'); email.focus(); return; }
+        if(pwScore(password.value) < 2){ if(!confirm('Password looks weak — continue?')){ password.focus(); return; } }
+        show(1);
+      });
+
+      backToPersonal.addEventListener('click', ()=> show(0));
+      toConfirm.addEventListener('click', ()=>{
+        // fill review
+        document.getElementById('revName').textContent = fullname.value || '—';
+        document.getElementById('revRole').textContent = document.getElementById('role').value || '—';
+        document.getElementById('revEmail').textContent = email.value || '—';
+        document.getElementById('revPhone').textContent = phone.value || '—';
+        document.getElementById('revFarm').textContent = document.getElementById('farmName').value || '—';
+        document.getElementById('revLoc').textContent = document.getElementById('location').value || '—';
+        document.getElementById('revCrops').textContent = document.getElementById('crops').value || '—';
+        show(2);
+      });
+
+      backToFarm.addEventListener('click', ()=> show(1));
+
+      // demo autofill
+      demo.addEventListener('click', ()=>{
+        fullname.value = 'Chinelo Ume';
+        document.getElementById('role').value = 'Farmer';
+        email.value = 'chinelo@example.com'; email.dispatchEvent(new Event('input'));
+        phone.value = '+2348095550123'; phone.dispatchEvent(new Event('input'));
+        password.value = 'Farm2025!'; password.dispatchEvent(new Event('input'));
+      });
+
+      // submit (mocked)
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        // final validation
+        if(!validEmail(email.value)){ alert('Please supply a valid email.'); email.focus(); return; }
+        if(pwScore(password.value) < 1){ alert('Please choose a stronger password.'); password.focus(); return; }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Creating…';
+
+        // build payload
+        const payload = {
+          fullname: fullname.value,
+          role: document.getElementById('role').value,
+          email: email.value,
+          phone: phone.value,
+          farm: {
+            name: document.getElementById('farmName').value,
+            size: document.getElementById('farmSize').value,
+            location: document.getElementById('location').value,
+            crops: document.getElementById('crops').value
+          },
+          createdAt: new Date().toISOString()
+        };
+
+        try{
+          // simulate network
+          await new Promise(r=>setTimeout(r,800));
+          // show toast
+          toast.classList.add('show');
+          // remove toast later
+          setTimeout(()=> toast.classList.remove('show'), 4500);
+
+          // keep a short delay so user sees confirmation, then reset and redirect
+          setTimeout(() => {
+            // reset form & UI
+            form.reset();
+            pwFill.style.width = '0%';
+            show(0);
+            // redirect in the same tab to the homepage (green.html)
+            window.location.href = 'login.html';
+          }, 1600);
+        }catch(err){
+          alert('Submission failed — try again.');
+        }finally{
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Create account';
+        }
+      });
+
+      // allow clicking step dots to go back
+      dots.forEach((d,i)=> d.addEventListener('click', () => {
+        if(i <= current + 1) show(i);
+      }));
+
+      // keyboard: Enter moves forward where appropriate
+      document.addEventListener('keydown', (ev) => {
+        if(ev.key === 'Enter'){
+          if(current === 0){ ev.preventDefault(); nextToFarm.click(); }
+          else if(current === 1){ ev.preventDefault(); toConfirm.click(); }
+        }
+      });
+    });
+  </script>
+</body>Start-Process 'c:\Users\user\Desktop\farm website\pkdfew.html'
+</html>
